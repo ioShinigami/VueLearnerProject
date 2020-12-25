@@ -1,5 +1,4 @@
 <html>
-
 <head>
 	<title>Shinigami Big Dicks the World</title>
 	<meta name="description" content="Learning VUE">
@@ -10,13 +9,36 @@
 		type="text/css">
 	<link href="https://cdn.jsdelivr.net/npm/quasar@1.14.7/dist/quasar.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="style.css">
+
 	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	
 </head>
 
+
 <body>
-	<div id="q-app">
+	<div id="q-app" v-if="displayUI"> 
+		<div class="full-width column inline no-wrap justify-center items-center content-start">
 
+	<q-btn v-for="item in randomTable" :key="item" class="q-gutter-sm " @click="ourFunction(item.name)">
+						SHINIGAMI
+					</q-btn>
 
+		</div>
+		
+
+		<q-icon name="mdi-home"></q-icon>
+			<q-card dark v-for="item in randomTable" :key="item">
+				<!-- <q-card dark v-for="(k,v) in randomTable" :key="k"></q-card> -->
+				<!-- <q-card -->
+					<q-btn v-for="item in randomTable" :key="item" class="newButton"  class="bg-positive" @click="ourFunction(item.name)">
+						SHINIGAMI
+					</q-btn>
+					
+				</q-card>
+
+	
+	
+		</div>
 	</div>
 </body>
 	<!--LINKS JS-->

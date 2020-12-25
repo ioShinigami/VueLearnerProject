@@ -1,7 +1,7 @@
  RegisterNetEvent("OPEN EVENT")
   AddEventHandler("OPEN EVENT", function()   
     SendNUIMessage({
-      type = "ourMessage"
+      type = "ourMessage",
     })
   end)
 
@@ -12,10 +12,9 @@
     })
   end)
 
- RegisterNUICallback("Close BUTTON", function(data, callback)
+ RegisterNUICallback("close", function(data, callback)
     SetNuiFocus(false, false)
     SetNuiFocusKeepInput(false)
     callback("ok")
   end)
-  
   
